@@ -1,0 +1,26 @@
+<% content_for :meat do %>
+	<div id="main" class="clearfix">
+		<div id="mask"></div>
+
+			<div id="primary" class="full-width">
+				<div id="content" role="main">
+					<div class="front-page">	    
+						<div class="clearfix">
+							<% flash.each do |name, msg| -%>
+							      <%= content_tag :div, msg, class: name %>
+							    <% end -%>
+									<div class="entry-content">
+<%= yield %>
+
+
+            </div><!--! end of .clearfix -->
+					</div><!--! end of .front-page -->
+				</div><!-- #content -->
+			</div><!-- #primary -->
+		</div><!-- #main -->
+
+
+<% end %>
+
+
+<%= render :template => 'layouts/application' %>

@@ -1,0 +1,16 @@
+<div>
+	<ul class="nav nav-tabs">
+	  <li role="presentation" <% if params[:controller] == "admins" %>class="active"<% end %> >
+			<%= link_to "Admins", admins_path %> 
+		</li>
+	  <li <% if params[:controller] == 'lti_dockers' %>class="active"<% end %> >
+			<%= link_to "Containers", '/lti_dockers' %>
+		</li>
+	  <li <% if params[:controller] == 'lti_user_sessions' %>class="active"<% end %> >
+			<%= link_to "LTI User Sessions", '/lti_user_sessions' %>
+	  </li>			
+	  <li <% if params[:controller] == 'lti_nonces' %>class="active"<% end %> >
+			<%= link_to "LTI Nonces", '/lti_nonces' %>
+	  </li>			
+	</ul>	
+</div>

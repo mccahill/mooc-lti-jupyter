@@ -1,0 +1,15 @@
+# an example of the mooc-lti-creds.yml file.
+# LTI-specific credentials 
+defaults: &DEFAULTS
+  #Coursera
+  consumer_key: your_key_goes_here
+  secret: your_secret_goes_here
+   
+development:
+  <<: *DEFAULTS
+
+test:
+  <<: *DEFAULTS
+
+production:
+  <<: *DEFAULTS

@@ -1,0 +1,8 @@
+An error occurred:
+
+<%= @msg %>
+
+<% unless @ex.nil? or @ex.backtrace.nil? %>
+Backtrace:
+<%= ex.backtrace.join("\n")%>
+<% end %>

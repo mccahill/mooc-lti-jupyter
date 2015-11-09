@@ -1,0 +1,13 @@
+.DS_Store
+log/development.log
+log/resource.log
+log/delayed_job.log
+config/database.yml
+config/rvcl.yml
+tmp
+log
+config/rvcl-creds.yml
+config/mooc-lti-creds.yml
+config/mooc-lti.yml
+rvcl_test-backup-db.sql
+hacks-to-get-mysql-working.txt

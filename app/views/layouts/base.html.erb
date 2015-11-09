@@ -1,0 +1,14 @@
+<% content_for :meat do %>
+	<div id="pagewrapper">
+		<div class="entry-content">
+			<div id='message_area' style='clear:both;'>
+				<% flash.each do |name, msg| -%>
+					<%= content_tag :div, msg, class: name %>
+		    <% end -%>
+			</div>
+			<%= yield :navbar%>
+			<%= yield %>
+  		<div class="clear"></div>
+<% end %>
+
+<%= render :template => 'layouts/application' %>

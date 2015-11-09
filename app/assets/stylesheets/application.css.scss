@@ -1,0 +1,255 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require active_scaffold
+ *= require_self
+ */
+
+@import "config";
+@import "bootstrap";
+@import "scaffold";
+
+#content {
+padding: 25px 0 30px 0;
+clear: both;
+height: 1%;
+}
+#main #content {
+float: left;
+/*width: 720px;*/
+}
+
+
+#subFooter {
+	clear: both;
+		text-align: left;
+  position: relative;
+  margin: 0 auto;
+  font-size: 10px; /* 10px */
+  line-height: 18px;
+  font-family: Helvetica,Arial,sans-serif;
+  color: #666;
+  padding: 20px 0 20px 115px;
+
+	border-top: 1px solid #b5b5b5;
+}
+#subFootLinks,#socialLinks {
+  margin: 0;
+  list-style-type: none;
+  float: right;
+  text-align: right;
+	padding:0;
+}
+#socialLinks {
+	margin-left: 20px;
+}
+#socialLinks li {
+	padding: 0 0 0 .25em;
+}
+#subFootLinks li, #subFootLinks ul,
+#socialLinks li, #socialLinks ul {
+  display: inline;
+  background: none;
+}
+#subFootLinks li {
+  padding: 0 10px 0 10px;
+  background-image: none;
+  border-left: 1px solid #dadada;
+}
+#subFootLinks li.noBorder {
+  border-left: 0;
+  padding-left: 0;
+}
+#subFootLinks li.last {
+  padding-right: 0;
+}
+#subFootLinks li.first {
+  border-left:0;
+}
+#subFootLinks li ul li {
+  padding: 0;
+  border: 0px;
+}
+#subFootLogo {
+  display: block;
+  width: 100px;
+  height: 42px;
+  background: url(/assets/struct/logo-subFooter.png) no-repeat 0 0;
+  text-indent: -9999px;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+#subFooter p {
+  margin: 0 0 0.75em;
+}
+/* menu */
+
+#mmenu {
+    float: right;
+    padding-top: 73px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    height: 40px;
+}
+
+#mmenu li {
+    display: inline;
+    margin-left: 10px;
+}
+
+#mmenu li.secondary {
+    margin-right: 5px;
+    color: #666;
+}
+
+#mmenu li a {
+    font-size: 16px;
+    color: #cfcfcf;
+    outline: none;
+}
+
+#mmenu li.subtle a { color: #666; margin-left: 10px;}
+#mmenu li.subtle a:hover { color: #92B92D; }
+#mmenu li a nav-active { 
+  text-decoration: none; 
+  color: #FBDE82;
+  }
+#mmenu li a:active { margin-top: 1px; }
+
+#mmenu li {
+    float: left;
+}
+#mmenu li a:hover{ 
+  text-decoration: none; 
+  color: #868F97;
+  }
+#mmenu .active a{
+ 	color: #FBDE82;
+}
+#mmenu li a {
+    height: 20px;
+    float: left;
+}
+
+
+#adminmenu {
+	list-style: none; 
+  padding-top: 5px;
+  padding-right: 25px;
+  text-align: center;
+  height: 20px;	
+	background-color: lightblue;
+}
+#adminmenu ul {
+}
+#adminmenu li {
+    display: inline;
+    margin-left: 19px;
+}
+
+#adminmenu li.secondary {
+    margin-right: 5px;
+    color: #666;
+}
+
+#adminmenu li a {
+    font-size: 12px;
+    outline: none;
+}
+
+#adminmenu li.subtle a { color: #666; margin-left: 10px;}
+#adminmenu li.subtle a:hover { color: #92B92D; }
+#adminmenu li a nav-active { 
+  text-decoration: none; 
+  color: #FBDE82;
+  }
+#adminmenu li a:active { margin-top: 1px; }
+
+#adminmenu li {
+    float: left;
+}
+#adminmenu li a:hover{ 
+  text-decoration: none; 
+  color: #868F97;
+  }
+#adminmenu .active a{
+ 	color: #a1b70d;
+}
+#adminmenu li a {
+    height: 20px;
+    float: left;
+}
+
+/* Flash alerts */
+.notice{
+
+	padding: 10px 10px 10px 10px;
+	margin: 10px 0 0 0;
+	border: 3px solid #ece7e2;
+	background: #f5f2ee;
+	color: #0736a4;
+	font-size: 16px;
+
+}
+
+.error{
+	width: 904px;
+	padding: 10px 10px 10px 10px;
+	margin: 10px 0 0 0;
+	border: 3px solid #ece7e2;
+	background: #cc3300;
+	color: white;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+//A nice layout for tabular lists
+#layouttable {
+	border-spacing: 0px;
+	border-collapse: collapse;
+	border: 1px solid #DFDFDF;
+	font-size: 11px;
+	margin-bottom: 20px;
+}
+
+#layouttable td, #layouttable th {
+	vertical-align: top;
+	border: 1px solid #CCCCCC;
+	padding:2px 10px;
+}
+
+
+#layouttable th {
+	background: url("/assets/struct/background-nav.gif") repeat-x scroll left top #F1F2DF;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+}
+.faq_question {
+	font-size: 10px;
+	font-style: italic;
+}
+
+.ui-autocomplete-loading {
+	background: white url('/assets/indicator.gif') right center no-repeat;
+}
+.admin_submit {
+	float:left;
+	font-size:14px;
+	margin-top:10px;
+	margin-right:10px
+}
+
+.cute input[type=file] {
+	height:20px;
+	width:400px;
+	line-height: 0px;
+}

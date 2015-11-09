@@ -1,0 +1,24 @@
+<% content_for :meat do %>
+
+	<p>Jupyter login referral page<br>If your web browser asks if it is OK to submit this form, say yes</p>
+
+	<script type="text/javascript">
+
+	function submitRealForm() {
+	  document.getElementById('password_input').value = "<%=@docker_guest_pw%>";
+	  document.realform.submit();
+	}
+	</script>
+
+
+	<form action="https://<%=@docker_host%>:<%=@docker_port%>/login<%=@optional_after_login_clause%>" name="realform" method="POST">
+	   <input type="hidden" name="password" id="password_input" value="0"/>
+	</form>
+
+	<script type="text/javascript">
+	window.onload=submitRealForm()
+	</script>
+
+<% end %>
+
+<%= render :template => 'layouts/minimalist' %>

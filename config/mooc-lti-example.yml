@@ -1,0 +1,24 @@
+# an example of the mooc-lti.yml file.
+# Configuration informaton for the mooc-lti application
+# The app expects this file to be called {RAILS_ROOT}/config/mooc-lti.yml, so place it somewhere
+# secure (such as /etc/) and then create a link from the app dir tree
+# Information should not be packaged with the app for security reasons
+# This file ideally should only be accessible by the application itself
+
+# DEFAULT settings.  Override for specific instance below if necessary
+
+defaults: &DEFAULTS
+  admin_email: [someone@somehost.somewhere]
+  app_url: somename.somedomain.somewhere
+
+development:
+  <<: *DEFAULTS
+
+test:
+  <<: *DEFAULTS
+  admin_email: [someone_else@somehost.somewhere]
+
+
+production:
+  <<: *DEFAULTS
+

@@ -1,0 +1,47 @@
+<h2 style="margin:0px">User Activity Log: </h2>
+
+<table border=1 id="layouttable">
+	<thead>
+  	<tr class="thead">
+		<% @items.each_pair{|key,value| 
+				arrow_direction = (@curDir?' &darr;':' &uarr;')
+				value = value + arrow_direction if key==@curOrder
+		%>
+			<th><%= link_to value.html_safe, {:action=>:sort, :order=>key, :curOrder=>@curOrder,:curDir=>@curDir} %></th>
+		<% } %>
+		</tr>
+	</thead>
+	
+	<%i=0 
+		for activity in @activities
+			i=i+1
+	%>
+		<tr <%='class="alternate"' if i%2==0%>>
+		<% @items.each_pair{|key,value| %>
+			<td>
+				<% if key.eql? "occurred_at" 
+					val = activity.send(key)
+				%>
+					<%=val.localtime.strftime("%Y-%m-%d %H:%M") unless val.blank?%>
+				<% elsif key.eql? "user_id"%>
+					<%= activity.send("user")%>
+				<% else %>
+					<%= activity.send(key)%>
+				<%end %>
+			</td>
+		<%}%>
+		</tr>
+	<%end%>
+	<tfoot>
+		<tr class="thead">
+			<th colspan=<%=@items.size%>>
+				<%= will_paginate @activities %>
+			</th>
+		</tr>
+		</tfoot>
+</table>
+
+
+
+
+

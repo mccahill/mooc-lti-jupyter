@@ -1,0 +1,21 @@
+<hr>
+<h3><%=this_app[:container_type]%> - <%=this_app[:container_desc]%></h3>  
+
+<% if this_app[:first_visit] %>
+<p><b><%= link_to "Click here", this_app[:app_path] %></b> to create your personal <%=this_app[:container_type]%> environment</p>
+<% else %>
+  <% if this_app[:app_expired] %>
+     <p>
+       Your <%= this_app[:container_type]%> reservation has expired - container reservations are valid for one semester. <br>
+       <b>
+         <%=link_to("Click here to renew your reservation",{:action=>:renew,:containertype=>this_app[:container_type]})%>
+       </b>
+     </p>
+  <% else %>
+     <p>
+       <b><%= link_to "Click here to log in", this_app[:app_path] %></b> 
+       to your <%=this_app[:container_type]%> environment
+     </p>
+  <% end %>
+<% end %>
+
