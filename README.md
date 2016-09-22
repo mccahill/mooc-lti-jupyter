@@ -18,7 +18,7 @@ then be redirected to the mooc-lti app and then immediately be redirected to the
 
 Application administrators *are* expected to interact with the mooc-lti app so see things like logs and manage the pool of Jupyter Docker containers.
 
-We presume that mooc-lti is run from inside a Apache web server so that we can depend on grabbing an environmental varibale with a Shibboleth/SAML assertion for the identity of any application administrators who visit the site. Apache is configured to require Shibboleth/SAML assertions for everything except the LTI passthrough path.
+We presume that mooc-lti is run from inside a Apache web server so that we can depend on grabbing an environmental variable with a Shibboleth/SAML assertion for the identity of any application administrators who visit the site. Apache is configured to require Shibboleth/SAML assertions for everything except the LTI passthrough path.
 
 App administrators can edit the app admin table, and view the LTI sessions, LTI nonces, and Jupyter container tables.
 
